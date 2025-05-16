@@ -14,7 +14,10 @@ import { getChromeOptions } from './chromeOptions.js';
 import { setupProcessHandlers } from './processHandlers.js';
 import { PrometheusFileReporter, writeAllProjectMetrics } from './PrometheusFileReporter.js';
 const logPath = process.env.LOG_DIR || path.join( process.cwd(), 'tests/selenium/log' );
-import { makeFilenameDate, saveScreenshot, startVideo, stopVideo, logSystemInformation, logBrowserInformation } from 'wdio-mediawiki';
+
+import { logBrowserInformation, logSystemInformation, makeFilenameDate, saveScreenshot, setDisplay, startVideo, stopVideo, startXvfb, stopXvfb } from 'wdio-mediawiki';
+
+let xvfbProcesses = [];
 
 if ( !process.env.MW_SERVER || !process.env.MW_SCRIPT_PATH ) {
 	throw new Error( 'MW_SERVER or MW_SCRIPT_PATH not defined.\nSee https://www.mediawiki.org/wiki/Selenium/How-to/Set_environment_variables\n' );
@@ -145,10 +148,17 @@ export const config = {
 	 * Gets executed once before all workers get launched.
 	 *
 	 * @param {Object} wdioConfig wdio configuration object
+	 * @param capabilities
 	 */
-	onPrepare: function ( wdioConfig ) {
+	onPrepare: function ( wdioConfig, capabilities ) {
 		console.log( `Run test targeting ${ wdioConfig.baseUrl }` );
 		logSystemInformation();
+
+		const { maxInstances, useBrowserHeadless } = wdioConfig;
+		// If we run in CI and not use headless, start XVFB
+		if ( useBrowserHeadless === false && process.env.CI ) {
+			xvfbProcesses = startXvfb( maxInstances, capabilities[ 0 ][ 'mw:width' ], capabilities[ 0 ][ 'mw:height' ] );
+		}
 	},
 	/**
 	 * Gets executed just before initializing the webdriver session and test framework.
@@ -161,6 +171,8 @@ export const config = {
 		const useBrowserHeadless = configuration.useBrowserHeadless;
 		if ( useBrowserHeadless === true ) {
 			capabilities[ 'goog:chromeOptions' ].args.push( '--headless' );
+		} else if ( process.env.CI ) {
+			setDisplay( configuration.maxInstances );
 		}
 	},
 
@@ -209,6 +221,7 @@ export const config = {
 	 * Executed after all runners are done.
 	 */
 	onComplete() {
+		stopXvfb( xvfbProcesses );
 		const random = Math.random().toString( 16 ).slice( 2, 10 );
 		const fileName = `project-metrics-${ makeFilenameDate() }-${ random }`;
 		writeAllProjectMetrics( logPath, fileName );
