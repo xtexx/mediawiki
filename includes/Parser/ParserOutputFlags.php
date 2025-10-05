@@ -36,16 +36,14 @@ enum ParserOutputFlags: string {
 	 * gallery on thumbnail pages.
 	 *
 	 * @see MainConfigSchema::CategoryMagicGallery
-	 * @see ParserOutput::getNoGallery()
-	 * @see ParserOutput::setNoGallery()
 	 * @since 1.38
 	 */
 	case NO_GALLERY = 'mw-NoGallery';
 
 	/**
-	 * Whether OOUI should be enabled.
-	 * @see ParserOutput::getEnableOOUI()
-	 * @see ParserOutput::setEnableOOUI()
+	 * Whether OOUI should be enabled.  If set, OOUI is enabled in
+	 * any OutputPage instance the ParserOutput containing this flag
+	 * is added to.
 	 * @since 1.38
 	 */
 	case ENABLE_OOUI = 'mw-EnableOOUI';
@@ -68,27 +66,27 @@ enum ParserOutputFlags: string {
 
 	/**
 	 * Show a new section link?
-	 * @see ParserOutput::getNewSection()
-	 * @see ParserOutput::setNewSection()
 	 * @since 1.38
 	 */
 	case NEW_SECTION = 'mw-NewSection';
 
 	/**
 	 * Hide the new section link?
-	 * @see ParserOutput::getHideNewSection()
-	 * @see ParserOutput::setHideNewSection()
 	 * @since 1.38
 	 */
 	case HIDE_NEW_SECTION = 'mw-HideNewSection';
 
 	/**
 	 * The prevent-clickjacking flag.
-	 * If true, we emit X-Frame-Options: DENY.
-	 * This controls if anti-clickjacking / frame-breaking headers will
-	 * be sent. This should be done for pages where edit actions are possible.
-	 * @see ParserOutput::getPreventClickjacking()
-	 * @see ParserOutput::setPreventClickjacking()
+	 *
+	 * If true, we emit an `X-Frame-Options` header appropriate for
+	 * edit pages.  The exact header value is controlled by
+	 * `$wgEditPageFrameOptions`.  This controls if anti-clickjacking
+	 * / frame-breaking headers will be sent.  This flag is set by
+	 * default for special pages.  For other pages where a
+	 * CSRF-protect form is displayed (for example where edit actions
+	 * are possible), you need to set this flag.
+	 *
 	 * @since 1.38
 	 */
 	case PREVENT_CLICKJACKING = 'mw-PreventClickjacking';
