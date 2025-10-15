@@ -855,6 +855,9 @@ because of Phabricator reports.
   this method is no longer needed. In other cases use getInstanceFromPrimary()
   instead.
 * Some static methods in Xml, deprecated in 1.42, now emit deprecation warnings:
+  - Xml::attrib(),
+  - Xml::buildForm(),
+  - Xml::fieldset(),
   - Xml::label() — use Html::label() instead,
   - Xml::listDropdown(), and
   - Xml::listDropdownOptions() & Xml::listDropdownOptionsOoui().
