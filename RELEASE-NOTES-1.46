@@ -847,6 +847,8 @@ because of Phabricator reports.
     - QuorumLockManager
     - RedisLockManager
     - ScopedLock
+* Wikimedia\MapCacheLRU\MapCacheLRU renamed to
+  Wikimedia\ObjectCache\MapCacheLRU.
 * Using an int for the $mode parameter of LanguageFallback::getAll() is now
   deprecated.  Use the new LanguageFallbackMode enumeration instead.
 * LanguageFallback::MESSAGES and LanguageFallback::STRICT are deprecated; use

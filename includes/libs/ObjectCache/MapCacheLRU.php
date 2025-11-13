@@ -4,7 +4,7 @@
  * @file
  */
 
-namespace Wikimedia\MapCacheLRU;
+namespace Wikimedia\ObjectCache;
 
 use InvalidArgumentException;
 use UnexpectedValueException;
@@ -405,3 +405,6 @@ class MapCacheLRU implements ExpirationAwareness {
 
 /** @deprecated class alias since 1.44 */
 class_alias( MapCacheLRU::class, 'MapCacheLRU' );
+
+/** @deprecated class alias since 1.46 */
+class_alias( MapCacheLRU::class, 'Wikimedia\MapCacheLRU\MapCacheLRU' );
