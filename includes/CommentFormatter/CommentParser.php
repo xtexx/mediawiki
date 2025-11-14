@@ -432,8 +432,7 @@ class CommentParser {
 				if ( $linkMarker ) {
 					// If the link is still valid, go ahead and replace it in!
 					$comment = preg_replace(
-						// @phan-suppress-next-next-line PhanPossiblyUndeclaredVariable linkRegexp set when used
-						// @phan-suppress-next-line PhanTypeMismatchArgumentNullableInternal linkRegexp set when used
+						// @phan-suppress-next-line PhanPossiblyUndeclaredVariable linkRegexp set when used
 						$linkRegexp,
 						StringUtils::escapeRegexReplacement( $linkMarker ),
 						$comment,
