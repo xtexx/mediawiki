@@ -82,7 +82,7 @@ class ApiErrorFormatter {
 	 *
 	 * @since 1.32
 	 * @param string $format New format.
-	 * @return ApiErrorFormatter
+	 * @return self
 	 */
 	public function newWithFormat( $format ) {
 		return new self( $this->result, $this->lang, $format, $this->useDB );
@@ -279,7 +279,7 @@ class ApiErrorFormatter {
 		}
 
 		$result = new ApiResult( 1_000_000 );
-		$formatter = new ApiErrorFormatter(
+		$formatter = new self(
 			$result, $this->lang, $format ?: $this->format, $this->useDB
 		);
 		$formatter->addMessagesFromStatus( null, $status, [ $type ] );

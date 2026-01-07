@@ -59,7 +59,7 @@ class ApiModuleManager extends ContextSource {
 	 *
 	 * This simply calls `addModule()` for each module in `$modules`.
 	 *
-	 * @see ApiModuleManager::addModule()
+	 * @see self::addModule()
 	 * @param array $modules A map of ModuleName => ModuleSpec
 	 * @param string $group Which group modules belong to (action,format,...)
 	 */

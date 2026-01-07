@@ -58,7 +58,7 @@ class ApiAuthManagerHelper {
 	 * Static version of the constructor, for chaining
 	 * @param ApiBase $module API module, for context and parameters
 	 * @param AuthManager|null $authManager
-	 * @return ApiAuthManagerHelper
+	 * @return self
 	 */
 	public static function newForModule( ApiBase $module, ?AuthManager $authManager = null ) {
 		return new self( $module, $authManager );
