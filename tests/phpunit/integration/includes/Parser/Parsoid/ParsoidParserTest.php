@@ -99,6 +99,9 @@ class ParsoidParserTest extends MediaWikiIntegrationTestCase {
 			$pageTitle->getPrefixedDBkey(),
 			$output->getExtensionData( ParsoidParser::PARSOID_TITLE_KEY )
 		);
+		$this->assertTrue(
+			$output->getTitle()->isSameLinkAs( $pageTitle )
+		);
 		$usedOptions = [
 			'collapsibleSections',
 			'disableContentConversion',

@@ -78,6 +78,7 @@ class DefaultOutputPipelineFactory {
 			'services' => [
 				'UrlUtils',
 				'ParsoidSiteConfig',
+				'TitleFormatter',
 			],
 			'optional_services' => [
 				'MobileFrontend.Context',

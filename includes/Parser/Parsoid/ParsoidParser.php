@@ -34,10 +34,7 @@ use Wikimedia\Parsoid\Parsoid;
  */
 class ParsoidParser /* eventually this will extend \Parser */ {
 	/**
-	 * @unstable
-	 * This should not be used widely right now since this may go away.
-	 * This is being added to support DiscussionTools with Parsoid HTML
-	 * and after initial exploration, this may be implemented differently.
+	 * @deprecated since 1.46, use ParserOutput::getTitle() instead
 	 */
 	public const PARSOID_TITLE_KEY = "parsoid:title-dbkey";
 
