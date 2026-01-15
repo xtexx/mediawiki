@@ -233,6 +233,8 @@ because of Phabricator reports.
 * The AddNewAccount hook, deprecated in 1.27, has been dropped.
 * wfMatchesDomainsList(), deprecated in 1.39, has been removed. Instead, use
   UrlUtils::matchesDomainList().
+* The global function wfAssembleUrl(), deprecated in 1.39, has been removed.
+  Instead, use UrlUtils::assemble().
 * …
 
 === Deprecations in 1.46 ===
