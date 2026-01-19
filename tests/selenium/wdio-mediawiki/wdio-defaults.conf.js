@@ -107,13 +107,12 @@ export const config = {
 		ui: 'bdd',
 		timeout: process.env.DEBUG ? ( 60 * 60 * 1000 ) : ( 60 * 1000 )
 	},
-	// Setting that enables video recording of the test.
-	// Recording videos is currently supported only on Linux,
-	// and is triggered by the DISPLAY value starting with a colon.
-	// https://www.mediawiki.org/wiki/Selenium/How-to/Record_videos_of_test_runs
-	recordVideo: true,
-	// If DISPLAY is setup, default usage is to not use browser headless
-	useBrowserHeadless: !process.env.DISPLAY,
+	// By default we do not record videos and you can turn it on in CI
+	// Make sure to add it to true and change mw:useBrowserHeadless to true
+	recordVideo: false,
+	// If you do not want to use browser headless, you need to export DISPLAY
+	// and have a display for the tests to work
+	useBrowserHeadless: true,
 	// See also: https://webdriver.io/docs/dot-reporter
 	reporters: [
 		// See also: https://webdriver.io/docs/spec-reporter
