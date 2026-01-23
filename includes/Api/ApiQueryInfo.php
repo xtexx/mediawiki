@@ -747,30 +747,20 @@ class ApiQueryInfo extends ApiQueryBase {
 			if ( $protectedPages ) {
 				$this->setVirtualDomain( ImageLinksTable::VIRTUAL_DOMAIN );
 
-				$migrationStage = $this->getConfig()->get( MainConfigNames::ImageLinksSchemaMigrationStage );
 				$queryInfo = $this->linksMigration->getQueryInfo( 'imagelinks' );
 
-				$queryBuilder = $this->getDB()->newSelectQueryBuilder()
+				$res = $this->getDB()->newSelectQueryBuilder()
+					->fields( [ 'il_from', 'lt_title' ] )
 					->tables( $queryInfo['tables'] )
 					->where( [ 'il_from' => array_keys( $protectedPages ) ] )
-					->caller( __METHOD__ );
-
-				if ( $migrationStage & SCHEMA_COMPAT_READ_NEW ) {
-					$queryBuilder
-						->fields( [ 'il_from', 'il_to' => 'lt_title' ] )
-						->joinConds( $queryInfo['joins'] )
-						->andWhere( [ 'lt_title' => $images, 'lt_namespace' => NS_FILE ] );
-				} else {
-					$queryBuilder
-						->fields( [ 'il_from', 'il_to' ] )
-						->andWhere( [ 'il_to' => $images ] );
-				}
-
-				$res = $queryBuilder->fetchResultSet();
+					->joinConds( $queryInfo['joins'] )
+					->andWhere( [ 'lt_title' => $images, 'lt_namespace' => NS_FILE ] )
+					->caller( __METHOD__ )
+					->fetchResultSet();
 
 				foreach ( $res as $row ) {
 					$protection = $protectedPages[$row->il_from];
-					$this->protections[NS_FILE][$row->il_to][] = $protection;
+					$this->protections[NS_FILE][$row->lt_title][] = $protection;
 				}
 
 				$this->resetVirtualDomain();
