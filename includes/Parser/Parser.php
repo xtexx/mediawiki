@@ -3014,10 +3014,11 @@ class Parser {
 
 		# Parser functions
 		if ( !$found ) {
-			$colonPos = strpos( $part1, ':' );
-			if ( $colonPos !== false ) {
+			// Allow colon or Japanese double-width colon as arg delimiter
+			if ( preg_match( '/[:：]/u', $part1, $colonMatches, PREG_OFFSET_CAPTURE ) ) {
+				[ $colonStr, $colonPos ] = $colonMatches[0];
 				$func = substr( $part1, 0, $colonPos );
-				$funcArgs = [ trim( substr( $part1, $colonPos + 1 ) ) ];
+				$funcArgs = [ trim( substr( $part1, $colonPos + strlen( $colonStr ) ) ) ];
 				$argsLength = $args->getLength();
 				for ( $i = 0; $i < $argsLength; $i++ ) {
 					$funcArgs[] = $args->item( $i );
@@ -5030,9 +5031,9 @@ class Parser {
 			if ( !( $flags & self::SFH_NO_HASH ) ) {
 				$syn = '#' . $syn;
 			}
-			# Remove trailing colon
-			if ( substr( $syn, -1, 1 ) === ':' ) {
-				$syn = substr( $syn, 0, -1 );
+			# Remove trailing colon (or Japanese double-width colon)
+			if ( str_ends_with( $syn, ':' ) || str_ends_with( $syn, '：' ) ) {
+				$syn = mb_substr( $syn, 0, -1 );
 			}
 			$this->mFunctionSynonyms[$sensitive][$syn] = $id;
 		}
