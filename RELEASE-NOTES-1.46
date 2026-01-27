@@ -444,6 +444,10 @@ because of Phabricator reports.
     - LanguageZh
     - LanguageHsb
     - LanguageGan
+  - MediaWiki\ObjectCache:
+    - ObjectCache
+    - ObjectCacheFactory
+    - SqlBagOStuff
   - MediaWiki\Skins\Hook => MediaWiki\Language\Skin
     - SkinAfterPortletHook
     - SkinPageReadyConfigHook
