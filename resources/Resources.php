@@ -1269,9 +1269,7 @@ return [
 			[ 'name' => 'portletLinkOptions.json', 'callback' => Skin::getPortletLinkOptions( ... ) ],
 			[
 				'name' => 'infinityValues.json',
-				'callback' => static function () {
-					return ExpiryDef::INFINITY_VALS;
-				}
+				'callback' => static fn () => ExpiryDef::INFINITY_VALS
 			]
 		],
 		'dependencies' => [
