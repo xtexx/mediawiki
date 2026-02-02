@@ -2857,8 +2857,10 @@ return [
 			'EditWatchlistDialog.vue',
 		],
 		"messages" => [
+			'accesskey-watchlistedit-normal-submit',
 			'cancel',
 			'ok',
+			'tooltip-watchlistedit-normal-submit',
 			'watchlistedit-table-remove-selected',
 			'watchlistedit-unwatch-confirmation',
 			'watchlistedit-unwatch-confirmation-empty',
