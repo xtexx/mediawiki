@@ -4561,7 +4561,7 @@ class Parser {
 	 *   null if language conversion is to be suppressed.
 	 * @internal
 	 */
-	private static function localizeTOC(
+	public static function localizeTOC(
 		?TOCData $tocData, Language $lang, ?ILanguageConverter $converter
 	) {
 		if ( $tocData === null ) {

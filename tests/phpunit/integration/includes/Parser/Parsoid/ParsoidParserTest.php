@@ -54,6 +54,7 @@ class ParsoidParserTest extends MediaWikiIntegrationTestCase {
 			'isMessage',
 			'isPreview',
 			'isSectionPreview',
+			'parsoidnewlc',
 			'useParsoid',
 			'wrapclass',
 		];
@@ -105,6 +106,7 @@ class ParsoidParserTest extends MediaWikiIntegrationTestCase {
 			'isMessage',
 			'isPreview',
 			'isSectionPreview',
+			'parsoidnewlc',
 			'useParsoid',
 			'wrapclass',
 		];
