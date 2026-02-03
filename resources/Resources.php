@@ -2862,6 +2862,7 @@ return [
 			'ok',
 			'tooltip-watchlistedit-normal-submit',
 			'watchlistedit-table-remove-selected',
+			'watchlistedit-table-remove-selected-error',
 			'watchlistedit-unwatch-confirmation',
 			'watchlistedit-unwatch-confirmation-empty',
 			'watchlistedit-unwatch-confirmation-accept',

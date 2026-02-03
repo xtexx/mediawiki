@@ -107,7 +107,9 @@ module.exports = defineComponent( {
 					mw.msg( 'watchlistlabels-editwatchlist-dialog-button-unassign' ) :
 					mw.msg( 'watchlistlabels-editwatchlist-dialog-unassign-error' );
 			} else {
-				return mw.msg( 'watchlistedit-table-remove-selected', selectedPages.value.length );
+				return selectedPages.value.length === 0 ?
+					mw.msg( 'watchlistedit-table-remove-selected-error' ) :
+					mw.msg( 'watchlistedit-table-remove-selected', selectedPages.value.length );
 			}
 		} );
 		const dialogBody = computed( () => {
@@ -123,7 +125,7 @@ module.exports = defineComponent( {
 			} else if ( dialogAction.value === 'unassign' ) {
 				showLabels.value = false;
 				if ( selectedPages.value.length > 0 && labels.value.size === 0 ) {
-					return mw.msg( 'watchlistlabels-editwatchlist-dialog-intro-unassign-noitemlabels' );
+					return mw.msg( 'watchlistlabels-editwatchlist-dialog-intro-unassign-noitemlabels', selectedPages.value.length );
 				} else if ( selectedPages.value.length === 0 ) {
 					return mw.msg( 'watchlistlabels-editwatchlist-dialog-intro-unassign-noitems' );
 				}
