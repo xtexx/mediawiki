@@ -14,6 +14,9 @@ export const config = { ...wdioDefaults,
 	// To enable video recording, enable video and disable browser headless
 	// recordVideo: true,
 	// useBrowserHeadless: false,
+	//
+	// To enable screenshots on all tests, disable screenshotsOnFailureOnly
+	// screenshotsOnFailureOnly: false,
 	mochaOpts: {
 		...wdioDefaults.mochaOpts,
 		retries: 1

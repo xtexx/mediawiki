@@ -113,6 +113,9 @@ export const config = {
 	// If you do not want to use browser headless, you need to export DISPLAY
 	// and have a display for the tests to work
 	useBrowserHeadless: true,
+	// Only take screenshots on test failures. Setting this to false will take screenshots
+	// independently if a test works or fail
+	screenshotsOnFailureOnly: true,
 	// See also: https://webdriver.io/docs/dot-reporter
 	reporters: [
 		// See also: https://webdriver.io/docs/spec-reporter
@@ -208,7 +211,10 @@ export const config = {
 	 */
 	afterTest: async function ( test, context, result ) {
 		try {
-			await saveScreenshot( `${ test.parent }-${ test.title }${ result.passed ? '' : '-failed' }` );
+			const hasFailed = result?.passed === false || Boolean( result?.error );
+			if ( browser.options.screenshotsOnFailureOnly !== true || hasFailed ) {
+				await saveScreenshot( `${ test.parent }-${ test.title }${ hasFailed ? '-failed' : '' }` );
+			}
 		} finally {
 			if ( browser.options.recordVideo === true ) {
 				stopVideo( ffmpeg );
