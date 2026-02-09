@@ -859,8 +859,9 @@ because of Phabricator reports.
   - Xml::buildForm(),
   - Xml::fieldset(),
   - Xml::label() — use Html::label() instead,
-  - Xml::listDropdown(), and
-  - Xml::listDropdownOptions() & Xml::listDropdownOptionsOoui().
+  - Xml::listDropdown(),
+  - Xml::listDropdownOptions() & Xml::listDropdownOptionsOoui(), and
+  - Xml::option().
 * Language::emphasize() is unused, got deprecated, and will be removed in the
   next version.
 * All public properties of ConverterRule have been deprecated and now emit

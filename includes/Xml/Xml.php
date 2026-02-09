@@ -179,10 +179,12 @@ class Xml {
 	 * @param array $attribs Optional additional HTML attributes
 	 * @return string HTML
 	 *
-	 * @deprecated since 1.42, use {@see Html::element} instead
+	 * @deprecated since 1.42, use {@see Html::element} instead; emitting warnings since 1.46
 	 */
 	public static function option( $text, $value = null, $selected = false,
 			$attribs = [] ) {
+		wfDeprecated( __METHOD__, '1.42' );
+
 		if ( $value !== null ) {
 			$attribs['value'] = $value;
 		}
