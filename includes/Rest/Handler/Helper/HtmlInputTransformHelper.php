@@ -372,6 +372,7 @@ class HtmlInputTransformHelper {
 				'html' => $original['html']['body'] ?? '',
 				'parsoid' => $original['data-parsoid']['body'] ?? null,
 				'mw' => $original['data-mw']['body'] ?? null,
+				'counters' => $original['counters'] ?? null,
 				'version' => null, // will be derived from $original['html']['headers']['content-type']
 				'headers' => $original['html']['headers'] ?? []
 			] );
