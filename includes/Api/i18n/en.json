@@ -987,6 +987,7 @@
 	"apihelp-query+info-paramvalue-prop-protection": "List the protection level of each page.",
 	"apihelp-query+info-paramvalue-prop-talkid": "The page ID of the talk page for each non-talk page.",
 	"apihelp-query+info-paramvalue-prop-watched": "List the watched status of each page.",
+	"apihelp-query+info-paramvalue-prop-watchlistlabels": "List the watchlist labels for each page.",
 	"apihelp-query+info-paramvalue-prop-watchers": "The number of watchers, if allowed.",
 	"apihelp-query+info-paramvalue-prop-visitingwatchers": "The number of watchers of each page who have visited recent edits to that page, if allowed.",
 	"apihelp-query+info-paramvalue-prop-notificationtimestamp": "The watchlist notification timestamp of each page.",
