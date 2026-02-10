@@ -2,7 +2,6 @@
 
 namespace MediaWiki\CommentFormatter;
 
-use MediaWiki\Cache\LinkBatch;
 use MediaWiki\FileRepo\File\File;
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
@@ -12,6 +11,7 @@ use MediaWiki\Language\Language;
 use MediaWiki\Linker\Linker;
 use MediaWiki\Linker\LinkRenderer;
 use MediaWiki\Linker\LinkTarget;
+use MediaWiki\Page\LinkBatch;
 use MediaWiki\Page\LinkBatchFactory;
 use MediaWiki\Page\LinkCache;
 use MediaWiki\Parser\Parser;

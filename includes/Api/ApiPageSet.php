@@ -10,7 +10,6 @@ namespace MediaWiki\Api;
 
 use MediaWiki\Api\Validator\SubmoduleDef;
 use MediaWiki\Cache\GenderCache;
-use MediaWiki\Cache\LinkBatch;
 use MediaWiki\Context\DerivativeContext;
 use MediaWiki\Language\ILanguageConverter;
 use MediaWiki\Language\Language;
@@ -19,6 +18,7 @@ use MediaWiki\Linker\LinkTarget;
 use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Page\LinkBatch;
 use MediaWiki\Page\LinkBatchFactory;
 use MediaWiki\Page\LinkCache;
 use MediaWiki\Page\PageIdentity;
