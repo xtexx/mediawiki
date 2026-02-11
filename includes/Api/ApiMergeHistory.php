@@ -20,15 +20,12 @@ use Wikimedia\ParamValidator\ParamValidator;
  */
 class ApiMergeHistory extends ApiBase {
 
-	private MergeHistoryFactory $mergeHistoryFactory;
-
 	public function __construct(
 		ApiMain $mainModule,
 		string $moduleName,
-		MergeHistoryFactory $mergeHistoryFactory
+		private readonly MergeHistoryFactory $mergeHistoryFactory,
 	) {
 		parent::__construct( $mainModule, $moduleName );
-		$this->mergeHistoryFactory = $mergeHistoryFactory;
 	}
 
 	public function execute() {

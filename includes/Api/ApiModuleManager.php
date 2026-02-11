@@ -24,10 +24,6 @@ use Wikimedia\ObjectFactory\ObjectFactory;
 class ApiModuleManager extends ContextSource {
 
 	/**
-	 * @var ApiBase
-	 */
-	private $mParent;
-	/**
 	 * @var ApiBase[]
 	 */
 	private $mInstances = [];
@@ -50,8 +46,10 @@ class ApiModuleManager extends ContextSource {
 	 * @param ApiBase $parentModule Parent module instance will be used during instantiation
 	 * @param ObjectFactory|null $objectFactory Object factory to use when instantiating modules
 	 */
-	public function __construct( ApiBase $parentModule, ?ObjectFactory $objectFactory = null ) {
-		$this->mParent = $parentModule;
+	public function __construct(
+		private readonly ApiBase $parentModule,
+		?ObjectFactory $objectFactory = null,
+	) {
 		$this->objectFactory = $objectFactory ?? MediaWikiServices::getInstance()->getObjectFactory();
 	}
 
@@ -158,7 +156,7 @@ class ApiModuleManager extends ContextSource {
 			$spec,
 			[
 				'extraArgs' => [
-					$this->mParent,
+					$this->parentModule,
 					$name
 				],
 				'assertClass' => $spec['class']

@@ -30,15 +30,12 @@ class ApiCSPReport extends ApiBase {
 	 */
 	private const MAX_POST_SIZE = 8192;
 
-	private UrlUtils $urlUtils;
-
 	public function __construct(
 		ApiMain $main,
 		string $action,
-		UrlUtils $urlUtils
+		private readonly UrlUtils $urlUtils,
 	) {
 		parent::__construct( $main, $action );
-		$this->urlUtils = $urlUtils;
 	}
 
 	/**
