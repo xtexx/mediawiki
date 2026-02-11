@@ -2950,6 +2950,7 @@ return [
 		],
 		'dependencies' => [
 			'mediawiki.jqueryMsg',
+			'mediawiki.storage',
 		],
 		'messages' => [
 			'temp-user-banner-tooltip-title',
