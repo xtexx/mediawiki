@@ -251,6 +251,7 @@ because of Phabricator reports.
   - Parser::getFunctionLang(), deprecated in 1.40. Use ::getTargetLanguage().
   - Parser::doBlockLevels(), deprecated in 1.35. Internal-only replacement
     is provided by BlockLevelPass::doBlockLevels().
+* wfMergeErrorArrays(), deprecated in 1.43, has been dropped.
 * …
 
 === Deprecations in 1.46 ===
