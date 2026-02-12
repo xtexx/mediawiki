@@ -237,6 +237,8 @@ because of Phabricator reports.
   UrlUtils::matchesDomainList().
 * The global function wfAssembleUrl(), deprecated in 1.39, has been removed.
   Instead, use UrlUtils::assemble().
+* Drop Parser::Options(), deprecated in 1.35, has been dropped. Instead, use
+  ::getOptions() and ::setOptions().
 * …
 
 === Deprecations in 1.46 ===
