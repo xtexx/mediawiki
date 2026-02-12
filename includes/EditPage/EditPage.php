@@ -244,13 +244,6 @@ class EditPage implements IEditObject {
 	/** @var ParserOutput|null */
 	private $mParserOutput;
 
-	/**
-	 * @var RevisionRecord|false|null
-	 *
-	 * A RevisionRecord corresponding to $this->editRevId or $this->edittime
-	 */
-	private $mExpectedParentRevision = false;
-
 	/** @var bool */
 	public $mShowSummaryField = true;
 
