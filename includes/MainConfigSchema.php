@@ -12832,9 +12832,9 @@ class MainConfigSchema {
 			'properties' => [
 				'url' => [ 'type' => 'string', 'format' => 'url' ],
 				'name' => [ 'type' => 'string' ],
+				'file' => [ 'type' => 'string' ],
 				'msg' => [ 'type' => 'string', 'description' => 'a message key' ]
 			],
-			'required' => [ 'url' ]
 		]
 	];
 
