@@ -892,6 +892,8 @@ because of Phabricator reports.
 * All skins are now required to declare the menus they render in their
   skin definition (per T409774). In future this will allow for
   skin optimizations.
+* Passing null to the $output parameter of FeedUtils::checkFeedOutput is now
+  deprecated and emits deprecation warnings.
 * …
 
 === Other changes in 1.46 ===
