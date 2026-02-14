@@ -92,6 +92,9 @@ For notes on 1.45.x and older releases, see HISTORY.
   cause PHP 8.5 (and Phan) to emit warnings when their return values are not
   used, as that is usually a mistake. This has no effect when running on PHP
   8.4 or earlier.
+* mw.message( ... ).parseDom() is now part of mediawiki.base and will return a
+  jQuery object wrapping a text node with the unparsed message contents if
+  mediawiki.jqueryMsg is not loaded.
 * …
 
 === External library changes in 1.46 ===
