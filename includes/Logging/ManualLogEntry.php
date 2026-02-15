@@ -413,7 +413,7 @@ class ManualLogEntry extends LogEntryBase implements Taggable {
 			'',
 			$this->getType(),
 			$this->getSubtype(),
-			$this->getTarget(),
+			$this->getTargetPage(),
 			$this->getComment(),
 			LogEntryBase::makeParamBlob( $this->getParameters() ),
 			$newId,
