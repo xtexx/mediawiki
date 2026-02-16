@@ -50,7 +50,7 @@ export const config = {
 	// Define the different browser configurations to use ("capabilities") here.
 	// ============
 
-	maxInstances: 1,
+	maxInstances: 6,
 	capabilities: [ {
 		// ======
 		// Custom conf keys for MediaWiki
