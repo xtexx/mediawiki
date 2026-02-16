@@ -120,6 +120,7 @@ class PostgresUpdater extends DatabaseUpdater {
 			[ 'addField', 'imagelinks', 'il_target_id', 'patch-imagelinks-add-il_target_id.sql' ],
 			[ 'migrateImagelinks' ],
 			[ 'modifyPrimaryKey', 'imagelinks', [ 'il_from', 'il_target_id' ], 'patch-imagelinks-pk.sql' ],
+			[ 'addMissingTalkPageWatchlistLabels' ],
 		];
 	}
 

@@ -7,6 +7,7 @@
 namespace MediaWiki\Installer;
 
 use CleanupEmptyCategories;
+use CleanupWatchlistLabelMember;
 use DeleteDefaultMessages;
 use LogicException;
 use MediaWiki\HookContainer\HookContainer;
@@ -1481,6 +1482,18 @@ abstract class DatabaseUpdater {
 			'table' => 'imagelinks'
 		] );
 		$this->output( "Running migrateLinksTable.php on imagelinks...\n" );
+		$task->execute();
+		$this->output( "done.\n" );
+	}
+
+	protected function addMissingTalkPageWatchlistLabels(): void {
+		if ( $this->updateRowExists( CleanupWatchlistLabelMember::class ) ) {
+			$this->outputApplied( "...watchlist_label_member table has already been fixed.\n" );
+			return;
+		}
+		$task = $this->maintenance->createChild( CleanupWatchlistLabelMember::class );
+		$task->loadParamsAndArgs( CleanupWatchlistLabelMember::class, [ 'force' => true ] );
+		$this->output( "Running cleanupWatchlistLabelMember.php on watchlist_label_member...\n" );
 		$task->execute();
 		$this->output( "done.\n" );
 	}
