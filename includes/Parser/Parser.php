@@ -1020,18 +1020,6 @@ class Parser {
 	}
 
 	/**
-	 * Accessor/mutator for the output type
-	 *
-	 * @param int|null $x New value or null to just get the current one
-	 * @return int
-	 * @deprecated since 1.35, use getOutputType()/setOutputType()
-	 */
-	public function OutputType( $x = null ) {
-		wfDeprecated( __METHOD__, '1.35' );
-		return wfSetVar( $this->mOutputType, $x );
-	}
-
-	/**
 	 * @return ParserOutput
 	 * @since 1.14
 	 */
@@ -1076,17 +1064,6 @@ class Parser {
 	 */
 	public function setLinkID( $id ) {
 		$this->mLinkID = $id;
-	}
-
-	/**
-	 * Get a language object for use in parser functions such as {{FORMATNUM:}}
-	 * @return Language
-	 * @since 1.7
-	 * @deprecated since 1.40; use ::getTargetLanguage() instead.
-	 */
-	public function getFunctionLang() {
-		wfDeprecated( __METHOD__, '1.40' );
-		return $this->getTargetLanguage();
 	}
 
 	/**
@@ -2738,20 +2715,6 @@ class Parser {
 	private function armorLinks( $text ) {
 		return preg_replace( '/\b((?i)' . $this->urlUtils->validProtocols() . ')/',
 			self::MARKER_PREFIX . "NOPARSE$1", $text );
-	}
-
-	/**
-	 * Make lists from lines starting with ':', '*', '#', etc. (DBL)
-	 *
-	 * @param string $text
-	 * @param bool $linestart Whether or not this is at the start of a line.
-	 * @internal
-	 * @return string The lists rendered as HTML
-	 * @deprecated since 1.35, will not be supported in future parsers
-	 */
-	public function doBlockLevels( $text, $linestart ) {
-		wfDeprecated( __METHOD__, '1.35' );
-		return BlockLevelPass::doBlockLevels( $text, $linestart );
 	}
 
 	/**
