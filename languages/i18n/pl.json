@@ -2301,7 +2301,7 @@
 	"watchlistlabels-delete-header": "Usunąć {{PLURAL:$1|tę etykietę|te etykiety}}?",
 	"watchlistlabels-delete-warning": "{{PLURAL:$1|Następująca etykieta obserwowanych zostanie usunięta|Następujące $2 obserwowanych etykiety zostaną usunięte|Następujące $2 etykiet zostanie usuniętych}}. Nie ma możliwości cofnięcia tej operacji.",
 	"watchlistlabels-delete-unused": "nie została użyta przy elementach listy obserwowanych",
-	"watchlistlabels-delete-count": "użyta przy $1 {{PLURAL:$2|element|elementach}} listy obserwowanych",
+	"watchlistlabels-delete-count": "użyta przy $1 {{PLURAL:$2|elemencie|elementach}} listy obserwowanych",
 	"watchlistlabels-onboarding-progress": "$1 z $2",
 	"watchlistlabels-onboarding-prev": "Wstecz",
 	"watchlistlabels-onboarding-next": "Dalej",
