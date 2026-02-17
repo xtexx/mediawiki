@@ -173,6 +173,7 @@ module.exports = defineComponent( {
 		} );
 		const selectAllCheckbox = document.getElementById( 'select-all-checkbox' );
 		selectAllCheckbox.addEventListener( 'selectall', updateSelectedPagesList );
+		updateSelectedPagesList();
 
 		const openAssignDialog = () => {
 			isOpen.value = true;
