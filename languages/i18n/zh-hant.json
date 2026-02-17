@@ -2349,7 +2349,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "分配標籤",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "無法分配標籤",
 	"watchlistlabels-editwatchlist-dialog-intro": "選擇您要{{PLURAL:$3|分配}}給$1的{{PLURAL:$2|標籤}}：",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "無法為這些監視清單項目分配標籤，因為您尚未定義任何標籤。請前往[[{{#Special:WatchlistLabels}}]]建立標籤。",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "無法為這些監視清單項目分配標籤，因為您尚未定義任何標籤。請前往[[Special:WatchlistLabels]]建立標籤。",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "請選取您想分配標籤的頁面。",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "移除標籤",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "無法移除標籤",

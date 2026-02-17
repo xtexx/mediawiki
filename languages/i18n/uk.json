@@ -2266,7 +2266,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "Призначити позначки",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "Неможливо призначити позначку",
 	"watchlistlabels-editwatchlist-dialog-intro": "Виберіть {{PLURAL:$2|позначку|позначки}} які ви хочете призначити до $1:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Ви не можете призначити позначки до цих елементів списку спостереження, оскільки у вас немає жодної визначеної позначки. Перейдіть на [[{{#Special:WatchlistLabels}}]] та створіть їх.",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Ви не можете призначити позначки до цих елементів списку спостереження, оскільки у вас немає жодної визначеної позначки. Перейдіть на [[Special:WatchlistLabels]] та створіть їх.",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "Будь ласка, виберіть сторінки, на які ви хочете поставити позначки",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "Зняти позначки",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "Неможливо вилучити позначки",

@@ -2431,7 +2431,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "分配标签",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "无法分配标签",
 	"watchlistlabels-editwatchlist-dialog-intro": "选择要{{PLURAL:$3|分配}}给$1的{{PLURAL:$2|标签}}：",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "无法为监视列表项目分配标签，因为您尚未定义任何标签。请前往[[{{#Special:WatchlistLabels}}]]创建标签。",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "无法为监视列表项目分配标签，因为您尚未定义任何标签。请前往[[Special:WatchlistLabels]]创建标签。",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "请选择你想分配标签的页面。",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "移除标签",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "无法移除标签",

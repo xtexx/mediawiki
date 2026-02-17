@@ -2271,7 +2271,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "Přiřadit štítky",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "Nelze přiřadit štítky",
 	"watchlistlabels-editwatchlist-dialog-intro": "Vyberte {{PLURAL:$2|štítek, který|štítky, které}} chcete {{PLURAL:$3|přiřadit}} k $1:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Sledovaným stránkám nemůžete přiřadit štítky, protože nemáte žádné štítky definovány. Pro jejich založení přejděte na [[{{#Special:WatchlistLabels}}]].",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Sledovaným stránkám nemůžete přiřadit štítky, protože nemáte žádné štítky definovány. Pro jejich založení přejděte na [[Special:WatchlistLabels]].",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "Vyberte prosím sledované stránky, kterým chcete štítky přiřadit.",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "Odebrat štítky",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "Nelze odebrat štítky",

@@ -2249,7 +2249,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "Etiketlər təyin et",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "Etiketlər təyin etmək mümkün deyil",
 	"watchlistlabels-editwatchlist-dialog-intro": "$1 üçün {{PLURAL:$3|təyin etmək}} istədiyiniz {{PLURAL:$2|etiketi|etiketləri}} seçin:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Bu izləmə siyahısı elementlərinə etiket təyin edə bilməzsiniz, çünki heç bir etiket yaratmamısınız. Yaratmaq üçün [[{{#Special:WatchlistLabels}}]] səhifəsinə keçid edin.",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Bu izləmə siyahısı elementlərinə etiket təyin edə bilməzsiniz, çünki heç bir etiket yaratmamısınız. Yaratmaq üçün [[Special:WatchlistLabels]] səhifəsinə keçid edin.",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "Etiket əlavə etmək istədiyiniz səhifələri seçin.",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "Etiketləri sil",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "Etiketləri silmək mümkün deyil",

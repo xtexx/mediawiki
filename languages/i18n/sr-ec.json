@@ -1469,6 +1469,7 @@
 	"uploadbtn": "Отпреми датотеку",
 	"reuploaddesc": "Назад на образац за отпремање",
 	"upload-refresh": "Освежи",
+	"upload-progress-processing": "Обрађивање датотеке. Освежите страницу да проверите поново.",
 	"upload-tryagain": "Проследи измењени опис датотеке",
 	"upload-tryagain-nostash": "Пошаљите ре-отпремљену датотеку и измењен опис",
 	"uploadnologin": "Нисте пријављени",
@@ -2161,6 +2162,7 @@
 	"watchlistlabels-form-name-exists": "Назив „$1” је заузет.",
 	"watchlistlabels-form-submit-new": "Направи",
 	"watchlistlabels-form-submit-edit": "Сачувај",
+	"watchlistlabels-delete-header": "Обриши {{PLURAL:$1|ову ознаку|ове ознаке}}?",
 	"watchlistlabels-onboarding-progress": "$1 од $2",
 	"watchlistlabels-onboarding-prev": "Претходно",
 	"watchlistlabels-onboarding-next": "Следеће",
@@ -4059,6 +4061,7 @@
 	"renameuser-error-temp-user-reserved": "Не можете користи „$1”. Резервисано је за привремене налоге.",
 	"renameuser-error-global-detaching": "Овај корисник има глобални налог. Да преименујете налог користите CentralAuth.",
 	"renameuser-error-global-rights": "Немате право да преименујете глобалне кориснике.",
+	"renameuser-error-local-rights": "Немате право да преименујете кориснике.",
 	"renameusersuccess": "{{GENDER:$2|Корисник|Корисница}} „<nowiki>$1</nowiki>“ је {{GENDER:$2|преименован|преименована}} на „<nowiki>$2</nowiki>“",
 	"renameuser-page-exists": "Страница $1 већ постоји и не може се заменити.",
 	"renameuser-page-moved": "Страница $1 је премештена на $2.",
@@ -4083,5 +4086,6 @@
 	"temp-user-unable-to-acquire": "Добављање корисничког имена привременог налога није успело. Молимо покушајте поново.",
 	"table-of-contents-show-button-aria-label": "Прикажи табелу са садржајем",
 	"table-of-contents-hide-button-aria-label": "Сакриј табелу са садржајем",
+	"diff-usergroups": "$1 {{PLURAL:$1|корисничка група|корисничке групе}}",
 	"languageselector-no-results": "Нема резултата."
 }

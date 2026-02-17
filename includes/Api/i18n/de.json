@@ -954,6 +954,7 @@
 	"apihelp-query+info-paramvalue-prop-protection": "Liste die Schutzstufe jeder Seite auf.",
 	"apihelp-query+info-paramvalue-prop-talkid": "Die Seitenkennung der Diskussionsseite für jede Nicht-Diskussionsseite.",
 	"apihelp-query+info-paramvalue-prop-watched": "Liste den Überwachungszustand jeder Seite auf.",
+	"apihelp-query+info-paramvalue-prop-watchlistlabels": "Listet die Beobachtungslisten-Labels für jede Seite auf.",
 	"apihelp-query+info-paramvalue-prop-watchers": "Die Anzahl der Beobachter, falls erlaubt.",
 	"apihelp-query+info-paramvalue-prop-visitingwatchers": "Die Anzahl der Beobachter jeder Seite, die die letzten Änderungen an dieser Seite besucht haben, sofern zulässig.",
 	"apihelp-query+info-paramvalue-prop-notificationtimestamp": "Der Beobachtungslisten-Benachrichtigungs-Zeitstempel jeder Seite.",

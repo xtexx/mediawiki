@@ -933,6 +933,7 @@
 	"apihelp-query+info-paramvalue-prop-protection": "Listar o nivel de protección de cada páxina.",
 	"apihelp-query+info-paramvalue-prop-talkid": "O ID de páxina da páxina de conversa para cada páxina que non é páxina de conversa.",
 	"apihelp-query+info-paramvalue-prop-watched": "Listar o estado de vixilancia de cada páxina.",
+	"apihelp-query+info-paramvalue-prop-watchlistlabels": "Listar as etiquetas da lista de vixilancia para cada páxina.",
 	"apihelp-query+info-paramvalue-prop-watchers": "O número de vixiantes, se está permitido.",
 	"apihelp-query+info-paramvalue-prop-visitingwatchers": "O nome dos usuarios que vixían cada páxina e que teñen visitado os cambios recentes a esta páxina, se está autorizado.",
 	"apihelp-query+info-paramvalue-prop-notificationtimestamp": "O selo de tempo de notificación da lista de vixilancia de cada páxina.",
