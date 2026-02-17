@@ -160,7 +160,7 @@ class SpecialWatchlistLabels extends SpecialPage {
 		}
 		$existingLabel = $this->labelStore->loadByName( $this->getUser(), $value );
 		$thisId = $alldata[self::PARAM_ID] ?? null;
-		if ( $existingLabel && $thisId && $existingLabel->getId() !== (int)$thisId ) {
+		if ( $existingLabel && $existingLabel->getId() !== (int)$thisId ) {
 			return StatusValue::newFatal( 'watchlistlabels-form-name-exists', $existingLabel->getName() );
 		}
 		return StatusValue::newGood();
