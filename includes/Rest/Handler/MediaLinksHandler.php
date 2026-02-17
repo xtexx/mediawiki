@@ -200,6 +200,6 @@ class MediaLinksHandler extends SimpleHandler {
 	}
 
 	public function getResponseBodySchemaFileName( string $method ): ?string {
-		return 'includes/Rest/Handler/Schema/MediaLinks.json';
+		return __DIR__ . '/Schema/MediaLinks.json';
 	}
 }
