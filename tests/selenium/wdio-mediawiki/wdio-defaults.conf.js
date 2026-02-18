@@ -50,7 +50,7 @@ export const config = {
 	// Define the different browser configurations to use ("capabilities") here.
 	// ============
 
-	maxInstances: 6,
+	maxInstances: process.env.CI ? 6 : 1,
 	capabilities: [ {
 		// ======
 		// Custom conf keys for MediaWiki
@@ -112,7 +112,7 @@ export const config = {
 	recordVideo: false,
 	// If you do not want to use browser headless, you need to export DISPLAY
 	// and have a display for the tests to work
-	useBrowserHeadless: true,
+	useBrowserHeadless: Boolean( process.env.CI ),
 	// Only take screenshots on test failures. Setting this to false will take screenshots
 	// independently if a test works or fail
 	screenshotsOnFailureOnly: true,
