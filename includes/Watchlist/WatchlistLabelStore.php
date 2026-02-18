@@ -5,9 +5,9 @@ namespace MediaWiki\Watchlist;
 use InvalidArgumentException;
 use MediaWiki\Config\Config;
 use MediaWiki\MainConfigNames;
-use MediaWiki\Status\Status;
 use MediaWiki\User\UserIdentity;
 use Psr\Log\LoggerInterface;
+use StatusValue;
 use Wikimedia\Rdbms\IConnectionProvider;
 
 /**
@@ -32,7 +32,7 @@ class WatchlistLabelStore {
 	 * Save a watchlist label to the database.
 	 * If this results in a new row, the label's ID will be set.
 	 */
-	public function save( WatchlistLabel $label ): Status {
+	public function save( WatchlistLabel $label ): StatusValue {
 		$dbw = $this->dbProvider->getPrimaryDatabase();
 		if ( $label->getId() ) {
 			$dbw->newUpdateQueryBuilder()
@@ -46,7 +46,7 @@ class WatchlistLabelStore {
 					__METHOD__ . " Watchlist label not saved. ID: {0}; Name: {1}",
 					[ $label->getId(), $label->getName() ]
 				);
-				return Status::newFatal( 'unknown-error' );
+				return StatusValue::newFatal( 'unknown-error' );
 			}
 		} else {
 			$userId = $label->getUser()->getId();
@@ -58,7 +58,7 @@ class WatchlistLabelStore {
 			if (
 				$this->config->get( MainConfigNames::WatchlistLabelsMaxPerUser ) <= $this->userLabelCount
 			) {
-				return Status::newFatal(
+				return StatusValue::newFatal(
 					'watchlistlabels-limit-reached',
 					$this->config->get( MainConfigNames::WatchlistLabelsMaxPerUser )
 				);
@@ -73,7 +73,7 @@ class WatchlistLabelStore {
 				$label->setId( $dbw->insertId() );
 			}
 		}
-		return Status::newGood();
+		return StatusValue::newGood();
 	}
 
 	/**

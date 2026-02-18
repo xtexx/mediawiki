@@ -185,7 +185,7 @@ class SpecialWatchlistLabels extends SpecialPage {
 		if ( $saved->isOK() ) {
 			$this->getOutput()->redirect( $this->getPageTitle()->getLocalURL() );
 		}
-		return $saved;
+		return Status::cast( $saved );
 	}
 
 	private function showDeleteConfirmation(): void {
