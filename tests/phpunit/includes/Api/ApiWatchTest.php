@@ -260,7 +260,7 @@ class ApiWatchTest extends ApiTestCase {
 
 		$res = $data[0]['watch'][0];
 		$this->assertTrue( $res['watched'] );
-		$this->assertTrue( $saveStatus->isOK() );
+		$this->assertStatusOK( $saveStatus );
 		$this->assertArrayHasKey( 'labels', $res );
 		$this->assertCount( 1, $res['labels'] );
 		$this->assertSame( 'Test Label', $res['labels'][0]['name'] );
@@ -288,7 +288,7 @@ class ApiWatchTest extends ApiTestCase {
 
 		$res = $data[0]['watch'][0];
 		$this->assertTrue( $res['watched'] );
-		$this->assertTrue( $saveStatus->isOK() );
+		$this->assertStatusOK( $saveStatus );
 		$this->assertArrayHasKey( 'labels', $res );
 		$this->assertCount( 1, $res['labels'] );
 		$this->assertSame( 'Valid Label', $res['labels'][0]['name'] );
@@ -319,8 +319,8 @@ class ApiWatchTest extends ApiTestCase {
 
 		$res = $data[0]['watch'][0];
 		$this->assertTrue( $res['watched'] );
-		$this->assertTrue( $saveStatus1->isOK() );
-		$this->assertTrue( $saveStatus2->isOK() );
+		$this->assertStatusOK( $saveStatus1 );
+		$this->assertStatusOK( $saveStatus2 );
 		$this->assertArrayHasKey( 'labels', $res );
 		$this->assertCount( 2, $res['labels'] );
 		$labelNames = array_column( $res['labels'], 'name' );
@@ -351,7 +351,7 @@ class ApiWatchTest extends ApiTestCase {
 			$res = $data[0]['watch'][$index];
 			$this->assertSame( $pageTitle, $res['title'] );
 			$this->assertTrue( $res['watched'] );
-			$this->assertTrue( $saveStatus->isOK() );
+			$this->assertStatusOK( $saveStatus );
 			$this->assertArrayHasKey( 'labels', $res );
 			$this->assertCount( 1, $res['labels'] );
 			$this->assertSame( 'Test Label For Multiple Pages', $res['labels'][0]['name'] );
