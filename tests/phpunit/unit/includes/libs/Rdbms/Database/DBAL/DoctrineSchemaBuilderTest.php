@@ -1,25 +1,25 @@
 <?php
 
-namespace Wikimedia\Tests\Rdbms;
+namespace Wikimedia\Tests\Rdbms\DBAL;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Platforms\SqlitePlatform;
 use MediaWikiUnitTestCase;
-use Wikimedia\Rdbms\DoctrineSchemaBuilder;
-use Wikimedia\Rdbms\MWMySQLPlatform;
-use Wikimedia\Rdbms\MWPostgreSqlPlatform;
+use Wikimedia\Rdbms\DBAL\DoctrineSchemaBuilder;
+use Wikimedia\Rdbms\DBAL\MWMySQLPlatform;
+use Wikimedia\Rdbms\DBAL\MWPostgreSqlPlatform;
 
 class DoctrineSchemaBuilderTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @dataProvider provideTestGetResultAllTables
-	 * @covers \Wikimedia\Rdbms\DoctrineSchemaBuilder
+	 * @covers \Wikimedia\Rdbms\DBAL\DoctrineSchemaBuilder
 	 *
 	 * @param AbstractPlatform $platform
 	 * @param string $expectedFile path fragment
 	 */
 	public function testGetResultAllTables( $platform, $expectedFile ) {
-		$basePath = dirname( __DIR__, 5 );
+		$basePath = dirname( __DIR__, 6 );
 		$builder = new DoctrineSchemaBuilder( $platform );
 		$json = file_get_contents( $basePath . '/data/db/tables.json' );
 		$tables = json_decode( $json, true );
