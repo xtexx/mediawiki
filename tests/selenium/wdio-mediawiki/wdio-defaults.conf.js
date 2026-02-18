@@ -156,12 +156,17 @@ export const config = {
 		console.log( `Run test targeting ${ wdioConfig.baseUrl }` );
 		logSystemInformation();
 
-		const { maxInstances, useBrowserHeadless } = wdioConfig;
-		// If we run in CI and not use headless, start XVFB
-		if ( useBrowserHeadless === false && process.env.CI ) {
+		const { maxInstances, useBrowserHeadless, recordVideo } = wdioConfig;
+
+		// When we pass on as CLI the parameters will be strings
+		const isHeadless = useBrowserHeadless === true || useBrowserHeadless === 'true';
+		const isRecording = recordVideo === true || recordVideo === 'true';
+
+		if ( !isHeadless && isRecording ) {
 			xvfbProcesses = startXvfb( maxInstances, capabilities[ 0 ][ 'mw:width' ], capabilities[ 0 ][ 'mw:height' ] );
 		}
 	},
+
 	/**
 	 * Gets executed just before initializing the webdriver session and test framework.
 	 * It allows you to manipulate configurations depending on the capability or spec.
@@ -170,10 +175,13 @@ export const config = {
 	 * @param {Array.<Object>} capabilities list of capabilities details
 	 */
 	beforeSession: function ( configuration, capabilities ) {
-		const useBrowserHeadless = configuration.useBrowserHeadless;
-		if ( useBrowserHeadless === true ) {
+		const { useBrowserHeadless, recordVideo } = configuration;
+		// When we pass on as CLI the parameters will be strings
+		const isHeadless = useBrowserHeadless === true || useBrowserHeadless === 'true';
+		const isRecording = recordVideo === true || recordVideo === 'true';
+		if ( isHeadless === true ) {
 			capabilities[ 'goog:chromeOptions' ].args.push( '--headless' );
-		} else if ( process.env.CI ) {
+		} else if ( isRecording === true ) {
 			setDisplay( configuration.maxInstances );
 		}
 	},
