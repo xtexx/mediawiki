@@ -1689,13 +1689,12 @@ class CoreParserFunctions {
 			return '';
 		}
 
-		$services = MediaWikiServices::getInstance();
 		if (
 			$t->equals( $parser->getTitle() ) &&
-			$services->getMainConfig()->get( MainConfigNames::MiserMode ) &&
+			$parser->getMiserMode() &&
 			!$parser->getOptions()->getInterfaceMessage() &&
 			// @TODO: disallow this word on all namespaces (T235957)
-			$services->getNamespaceInfo()->isSubject( $t->getNamespace() )
+			$parser->getNamespaceInfo()->isSubject( $t->getNamespace() )
 		) {
 			// Use a stub result instead of the actual revision ID in order to avoid
 			// double parses on page save but still allow preview detection (T137900)

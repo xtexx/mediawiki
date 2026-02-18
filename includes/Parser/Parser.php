@@ -1574,6 +1574,22 @@ class Parser {
 	}
 
 	/**
+	 * @internal
+	 * @since 1.46
+	 */
+	public function getNamespaceInfo(): NamespaceInfo {
+		return $this->nsInfo;
+	}
+
+	/**
+	 * @internal
+	 * @since 1.46
+	 */
+	public function getMiserMode(): bool {
+		return $this->svcOptions->get( MainConfigNames::MiserMode );
+	}
+
+	/**
 	 * Get a HookRunner for calling core hooks
 	 *
 	 * @internal This is for use by core only. Hook interfaces may be removed
