@@ -2235,7 +2235,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "Tetapkan label",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "Tidak dapat menetapkan label",
 	"watchlistlabels-editwatchlist-dialog-intro": "Pilih {{PLURAL:$2|label}} yang anda ingin {{PLURAL:$3|agihkan}} ke $1:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Anda tidak boleh menetapkan label kepada item senarai pantau ini kerana anda tidak mempunyai label yang ditakrifkan. Pergi ke [[Special:WatchlistLabels]] untuk menciptanya.",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Anda tidak boleh menetapkan label kepada item senarai pantau ini kerana anda tidak mempunyai label yang ditakrifkan. Pergi ke [[$1]] untuk menciptanya.",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "Sila pilih laman yang anda ingin berikan label.",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "Buang label",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "Tidak dapat membuang label",

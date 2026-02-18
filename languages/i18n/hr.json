@@ -1975,7 +1975,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "Dodijeli oznake",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "Oznake nije moguće dodijeliti",
 	"watchlistlabels-editwatchlist-dialog-intro": "Označite {{PLURAL:$2|oznaku|oznake}} {{PLURAL:$3|koju|koje}} želite dodijeliti za $1:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Ne možete dodijeliti oznake ovim stavkama popisa praćenja jer nemate definirane oznake. Stvorite ih na stranici [[Special:WatchlistLabels]].",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Ne možete dodijeliti oznake ovim stavkama popisa praćenja jer nemate definirane oznake. Stvorite ih na stranici [[$1]].",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "Molimo izaberite stranice kojima želite dodijeliti oznake.",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "Ukloni oznake",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "Oznake nije moguće ukloniti",

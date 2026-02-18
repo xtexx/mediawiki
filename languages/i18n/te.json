@@ -2131,7 +2131,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "లేబుళ్ళను తగిలించు",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "లేబుళ్ళను కేటాయించలేక పోయాం",
 	"watchlistlabels-editwatchlist-dialog-intro": "$1 కు {{PLURAL:$3|తగిలించడానికి}} {{PLURAL:$2|లేబుల్‌ను|లేబుళ్ళను}} ఎంచుకోండి:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "ఈ వీక్షణా జాబితా అంశాలకు లేబుళ్ళను చేర్చలేరు. ఎందుకంటే మీరు ఒక్క లేబులును కూడా నిర్వచించ లేదు. [[Special:WatchlistLabels]] కు వెళ్ళి కొన్ని లేబుళ్ళను సృష్టించండి.",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "ఈ వీక్షణా జాబితా అంశాలకు లేబుళ్ళను చేర్చలేరు. ఎందుకంటే మీరు ఒక్క లేబులును కూడా నిర్వచించ లేదు. [[$1]] కు వెళ్ళి కొన్ని లేబుళ్ళను సృష్టించండి.",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "లేబుళ్ళను తీసివేయి",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "లేబుళ్ళను తీసివేయలేక పోయాం",
 	"watchlistlabels-editwatchlist-dialog-intro-unassign-noitems": "మీరు లేబుళ్ళను తీసివేయాలనుకుంటున్న పేజీలను ఎంచుకోండి.",

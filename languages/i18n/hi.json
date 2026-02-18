@@ -2317,7 +2317,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "लेबल्स सौंपें",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "लेबल्स सौंपे नहीं जा सके",
 	"watchlistlabels-editwatchlist-dialog-intro": "{{PLURAL:$2|वह लेबल|वो लेबल्स}} चुनें जो आप $1 को {{PLURAL:$3|सौंपना}} चाहते हैं:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "आप इन ध्यानसूची प्रविष्टियों को लेबल्स नहीं सौंप सकते क्योंकि आपने कोई भी लेबल परिभाषित नहीं किया है। कुछ लेबल्स बनाने के लिए [[Special:WatchlistLabels]] पर जाएँ।",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "आप इन ध्यानसूची प्रविष्टियों को लेबल्स नहीं सौंप सकते क्योंकि आपने कोई भी लेबल परिभाषित नहीं किया है। कुछ लेबल्स बनाने के लिए [[$1]] पर जाएँ।",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "कृपया वो पृष्ठ चुनें जिन्हें आप लेबल्स सौंपना चाहेंगे।",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "लेबल्स हटाएँ",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "लेबल्स हटाए नहीं जा सके",

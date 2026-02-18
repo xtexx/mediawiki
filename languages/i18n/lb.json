@@ -2020,7 +2020,7 @@
 	"watchlistlabels-editwatchlist-dialog-button": "Etiketten zouweisen",
 	"watchlistlabels-editwatchlist-dialog-assign-error": "Etikette konnten net zougewise ginn",
 	"watchlistlabels-editwatchlist-dialog-intro": "Wielt d'{{PLURAL:$2|Etikett|Etiketten}} aus, déi Dir de Säite(n) $1 {{PLURAL:$3|zouweise}} wëllt:",
-	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Dir kënnt dësen Anträg op der Iwwerwaachungslëscht keng Etiketten zouweisen, well Dir keng Etiketten definéiert hutt. Gitt op [[Special:WatchlistLabels]] fir der unzeleeën.",
+	"watchlistlabels-editwatchlist-dialog-intro-nolabels": "Dir kënnt dësen Anträg op der Iwwerwaachungslëscht keng Etiketten zouweisen, well Dir keng Etiketten definéiert hutt. Gitt op [[$1]] fir der unzeleeën.",
 	"watchlistlabels-editwatchlist-dialog-intro-noitems": "Wielt wgl. d'Säiten aus, deenen Dir Etiketten zouweise wëllt.",
 	"watchlistlabels-editwatchlist-dialog-button-unassign": "Etiketten ewechhuelen",
 	"watchlistlabels-editwatchlist-dialog-unassign-error": "Etikette konnten net ewechgeholl ginn",
