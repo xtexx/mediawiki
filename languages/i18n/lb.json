@@ -800,6 +800,8 @@
 	"mergehistory-fail-invalid-dest": "D'Zilsäit ass ongülteg.",
 	"mergehistory-fail-permission": "Net genuch Rechter fir den Historique vun de Versiounen ze fusionéieren.",
 	"mergehistory-fail-self-merge": "Quell an Zilsäit sinn déi selwecht.",
+	"mergehistory-fail-timestamps-overlap": "De spezifizéierten Zäitraum iwwerschneit sech mat bestoende Versioune vun der Zilsäit.",
+	"mergehistory-fail-change-current-revision": "Iwwer MergeHistory ka vu kenger vu béide Säiten déi aktuell Versioun geännert ginn (et sief dann, et féiert een déi ganz Originalsäit an d'Zilsäit zesummen)",
 	"mergehistory-fail-toobig": "D'zesummeleeë vun der Lëscht vun de Versioune konnt net gemaach ginn well méi wéi d'Limite vun $1 {{PLURAL:$1|Versioun|Versioune}} geréckelt géife ginn",
 	"mergehistory-no-source": "Originalsäit \"$1\" gëtt et net.",
 	"mergehistory-no-destination": "D'Zilsäit „$1“ gëtt et net.",

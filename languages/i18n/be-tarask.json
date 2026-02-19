@@ -273,7 +273,7 @@
 	"querypage-updates-periodical": "Абнаўленьні для гэтай старонкі выконваюцца пэрыядычна.",
 	"viewsource": "Прагляд коду",
 	"protection-indicator-title-infinity": "Гэтая старонка абароненая ад рэдагаваньня ($1).",
-	"protection-indicator-title": "Гэтая старонка абароненая, і да $2 яе могуць рэдагаваць толькі карыстальнікі з дазволам „$1“.",
+	"protection-indicator-title": "Гэтая старонка абароненая ад рэдагаваньня ($1) да $2.",
 	"skin-action-viewsource": "Прагляд коду",
 	"viewsource-title": "Прагляд крыніцы для $1",
 	"actionthrottled": "Дзеяньне прытрыманае",
