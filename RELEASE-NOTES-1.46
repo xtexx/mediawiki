@@ -50,6 +50,11 @@ For notes on 1.45.x and older releases, see HISTORY.
   The browser adds restrictions on the SVG when included as an <img> for
   additional protection. We do advise configuring CSP headers to protect users
   in case they open a SVG file directly in the browser.
+* $wgThumbLimits has two new entries by default, 220px and 400px.  This
+  matches the configuration used by WMF in production.  Since the default
+  user thumbsize option is an index into this list (currently, '5'), this
+  has the effect of changing the user default thumbnail size from 300px
+  to 250px; again matching current WMF production defaults.
 * …
 
 ==== Removed configuration ====

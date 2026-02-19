@@ -2285,8 +2285,10 @@ class MainConfigSchema {
 			150,
 			180,
 			200,
+			220,
 			250,
-			300
+			300,
+			400,
 		],
 		'type' => 'list',
 	];

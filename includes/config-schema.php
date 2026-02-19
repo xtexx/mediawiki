@@ -309,8 +309,10 @@ return [
 				150,
 				180,
 				200,
+				220,
 				250,
 				300,
+				400,
 			],
 			'ThumbnailNamespaces' => [
 				6,
