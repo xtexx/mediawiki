@@ -77,7 +77,7 @@ class LanguageNameSearchTest extends MediaWikiIntegrationTestCase {
 			[ 'punja', [
 				// Presence of CLDR extension affects the results
 				'pa' => class_exists( \MediaWiki\Extension\CLDR\LanguageNames::class ) ? 'punjabi' : 'punjaabi sennii',
-				'pa-guru' => 'punjabi (gurmukhi-skrift)',
+				'pa-guru' => class_exists( \MediaWiki\Extension\CLDR\LanguageNames::class ) ? 'punjabi (gurmukhi script)' : 'punjabi (gurmukhi-skrift)',
 				'pnb' => 'punjabi western'
 			]
 			],
