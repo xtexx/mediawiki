@@ -16,7 +16,6 @@ $cfg['suppress_issue_types'][] = 'PhanThrowTypeMismatch';
 
 $cfg['file_list'] = array_merge(
 	$cfg['file_list'],
-	class_exists( AllowDynamicProperties::class ) ? [] : [ '.phan/stubs/AllowDynamicProperties.php' ],
 	[
 		// This makes constants and globals known to Phan before processing all other files.
 		// You can check the parser order with --dump-parsed-file-list
