@@ -286,18 +286,8 @@ class ApiWatch extends ApiBase {
 			];
 		}
 
-		// Validate each label ID, collecting valid ones and tracking if any are invalid
-		$validLabels = [];
-		$hasError = false;
-		foreach ( $labelIds as $labelId ) {
-			$label = $this->watchlistLabelStore->loadById( $user, (int)$labelId );
-			if ( !$label ) {
-				// Mark that we found an invalid label
-				$hasError = true;
-			} else {
-				$validLabels[] = $label;
-			}
-		}
+		$validLabels = $this->watchlistLabelStore->loadByIds( $user, $labelIds );
+		$hasError = count( $labelIds ) !== count( $validLabels );
 
 		return [
 			'labels' => $validLabels,

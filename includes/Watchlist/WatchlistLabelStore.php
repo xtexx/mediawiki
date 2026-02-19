@@ -127,16 +127,30 @@ class WatchlistLabelStore {
 	 * @return ?WatchlistLabel The label, or null if not found.
 	 */
 	public function loadById( UserIdentity $user, int $id ): ?WatchlistLabel {
-		$select = $this->dbProvider->getReplicaDatabase()->newSelectQueryBuilder();
-		$result = $select->table( self::TABLE_WATCHLIST_LABEL )
-			->fields( [ 'wll_id', 'wll_name' ] )
+		return $this->loadByIds( $user, [ $id ] )[0] ?? null;
+	}
+
+	/**
+	 * Load multiple watchlist labels at once by their IDs.
+	 *
+	 * @param UserIdentity $user
+	 * @param int[] $ids The IDs of the watchlist labels to load.
+	 *
+	 * @return WatchlistLabel[] The labels that were found.
+	 */
+	public function loadByIds( UserIdentity $user, array $ids ): array {
+		$result = $this->dbProvider->getReplicaDatabase()->newSelectQueryBuilder()
+			->select( [ 'wll_id', 'wll_name' ] )
+			->from( self::TABLE_WATCHLIST_LABEL )
 			// It's not necessary to query for the user, but it adds an extra check.
-			->where( [ 'wll_id' => $id, 'wll_user' => $user->getId() ] )
+			->where( [ 'wll_id' => $ids, 'wll_user' => $user->getId() ] )
 			->caller( __METHOD__ )
-			->fetchRow();
-		return $result
-			? new WatchlistLabel( $user, $result->wll_name, $result->wll_id )
-			: null;
+			->fetchResultSet();
+
+		return array_map(
+			static fn ( $row ) => new WatchlistLabel( $user, $row->wll_name, $row->wll_id ),
+			iterator_to_array( $result )
+		);
 	}
 
 	/**
