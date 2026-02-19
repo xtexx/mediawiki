@@ -1191,7 +1191,7 @@ class BlockManagerTest extends MediaWikiIntegrationTestCase {
 				'infinity'
 			)
 			->placeBlock();
-		$this->assertTrue( $blockStatus->isGood() );
+		$this->assertStatusGood( $blockStatus );
 		$this->assertNotNull( $this->getServiceContainer()->getBlockManager()->getIpRangeBlock( '1.2.3.4/16' ) );
 	}
 
@@ -1203,7 +1203,7 @@ class BlockManagerTest extends MediaWikiIntegrationTestCase {
 				'infinity'
 			)
 			->placeBlock();
-		$this->assertTrue( $blockStatus->isGood() );
+		$this->assertStatusGood( $blockStatus );
 		$this->assertNull( $this->getServiceContainer()->getBlockManager()->getIpRangeBlock( '1.2.3.4' ) );
 	}
 }
