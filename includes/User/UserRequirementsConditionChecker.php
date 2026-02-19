@@ -349,6 +349,10 @@ class UserRequirementsConditionChecker {
 	 * @return list<mixed>
 	 */
 	private function extractConditionsInternal( $cond ): array {
+		if ( $cond === [] ) {
+			return [];
+		}
+
 		$result = [];
 		if ( is_array( $cond ) ) {
 			$op = $cond[0];
