@@ -1,7 +1,8 @@
 /**
- * A special widget that displays a message that a page is being watched/unwatched
- * with a selection widget that can determine how long the page will be watched.
- * If a page is being watched then a dropdown with expiry options is included.
+ * This widget is for the contents of the mw.notify popup that is shown when a page's "watchstar" is clicked (i.e. the
+ * 'watch this page' link; it may not be a star on all skins). It displays a message that a page is being
+ * watched/unwatched; a selection widget that can determine how long the page will be watched; and what watchlist labels
+ * should be applied.
  *
  * @exports mediawiki.watchstar.widgets
  * @extends OO.ui.Widget
@@ -10,8 +11,11 @@
  * @param {string|null} expiry ISO 8601 timestamp of the expiry to be pre-selected, or 'infinity'
  * @param {Function} updateWatchLink
  * @param {Object} config Configuration object
+ * @param {jQuery} config.$link
+ * @param {boolean} config.expiryEnabled Show the expiry dropdown.
+ * @param {boolean} config.labelsEnabled Show the labels selector.
  */
-function WatchlistExpiryWidget( action, pageTitle, expiry, updateWatchLink, config ) {
+function WatchlistPopup( action, pageTitle, expiry, updateWatchLink, config ) {
 	const dataExpiryOptions = require( './data.json' ).options,
 		expiryOptions = [];
 	let expiryDropdown;
@@ -19,14 +23,14 @@ function WatchlistExpiryWidget( action, pageTitle, expiry, updateWatchLink, conf
 	config = config || {};
 	const $link = config.$link;
 
-	WatchlistExpiryWidget.super.call( this, config );
+	WatchlistPopup.super.call( this, config );
 
 	const messageLabel = new OO.ui.LabelWidget( {
 		label: config.message
 	} );
 
 	this.$element
-		.addClass( 'mw-watchstar-WatchlistExpiryWidget' )
+		.addClass( 'mw-watchstar-WatchlistPopup' )
 		.append( messageLabel.$element );
 
 	/**
@@ -58,16 +62,18 @@ function WatchlistExpiryWidget( action, pageTitle, expiry, updateWatchLink, conf
 		} );
 	}
 
-	if ( action === 'watch' ) {
+	if ( config.expiryEnabled || config.labelsEnabled ) {
 		addTabKeyListener();
+	}
 
+	if ( config.expiryEnabled && action === 'watch' ) {
 		for ( const key in dataExpiryOptions ) {
 			expiryOptions.push( { data: dataExpiryOptions[ key ], label: key } );
 		}
 
 		const dropdownLabel = new OO.ui.LabelWidget( {
 			label: mw.message( 'addedwatchexpiry-options-label' ).parseDom(),
-			classes: [ 'mw-WatchlistExpiryWidgetwatchlist-dropdown-label' ]
+			classes: [ 'mw-WatchlistPopup-LabelWidget' ]
 		} );
 		expiryDropdown = new OO.ui.DropdownInputWidget( {
 			options: expiryOptions,
@@ -129,6 +135,6 @@ function WatchlistExpiryWidget( action, pageTitle, expiry, updateWatchLink, conf
 	}
 }
 
-OO.inheritClass( WatchlistExpiryWidget, OO.ui.Widget );
+OO.inheritClass( WatchlistPopup, OO.ui.Widget );
 
-module.exports = WatchlistExpiryWidget;
+module.exports = WatchlistPopup;

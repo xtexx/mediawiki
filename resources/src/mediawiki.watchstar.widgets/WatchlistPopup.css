@@ -1,10 +1,10 @@
-.mw-watchstar-WatchlistExpiryWidget label {
+.mw-watchstar-WatchlistPopup label {
 	/* Even though the parent .mw-notification already has this set, */
 	/* it's overridden by the label elements. */
 	cursor: pointer;
 }
 
-.mw-WatchlistExpiryWidgetwatchlist-dropdown-label {
+.mw-watchstar-WatchlistPopup .oo-ui-labelElement {
 	display: block;
 	margin-top: 0.8em;
 }

@@ -1780,7 +1780,10 @@ return [
 		'remoteBasePath' => "$wgResourceBasePath/resources/src/mediawiki.page.watch.ajax",
 		'packageFiles' => [
 			'watch-ajax.js',
-			[ 'name' => 'config.json', 'config' => [ MainConfigNames::WatchlistExpiry ] ],
+			[
+				'name' => 'config.json',
+				'config' => [ MainConfigNames::WatchlistExpiry, MainConfigNames::EnableWatchlistLabels ],
+			],
 		],
 		'dependencies' => [
 			'mediawiki.api',
@@ -3468,12 +3471,12 @@ return [
 		'localBasePath' => MW_INSTALL_PATH . '/resources/src/mediawiki.watchstar.widgets',
 		'remoteBasePath' => "$wgResourceBasePath/resources/src/mediawiki.watchstar.widgets",
 		'packageFiles' => [
-			'WatchlistExpiryWidget.js',
+			'WatchlistPopup.js',
 			[ 'name' => 'data.json', 'callback' => static function ( MessageLocalizer $messageLocalizer ) {
 				return WatchAction::getExpiryOptions( $messageLocalizer, false );
 			} ]
 		],
-		'styles' => 'WatchlistExpiryWidget.css',
+		'styles' => 'WatchlistPopup.css',
 		'dependencies' => [
 			'oojs-ui',
 			'mediawiki.api'
