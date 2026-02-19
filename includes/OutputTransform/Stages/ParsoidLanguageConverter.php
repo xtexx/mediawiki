@@ -374,7 +374,7 @@ class ParsoidLanguageConverter extends ContentDOMTransformStage {
 			$suffix = ( $fragment !== null ) ? "#$fragment" : "";
 			unset( $queryElts['title'] );
 			unset( $queryElts['action'] );
-			unset( $queryElts['redlinks'] );
+			unset( $queryElts['redlink'] );
 			$href = $wasRelative ? $varnt->getLocalURL( $queryElts ) :
 				  $varnt->getFullURL( $queryElts );
 			$a->setAttribute( 'href', $href . $suffix );
