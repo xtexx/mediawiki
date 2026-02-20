@@ -108,7 +108,7 @@ export const config = {
 		timeout: process.env.DEBUG ? ( 60 * 60 * 1000 ) : ( 60 * 1000 )
 	},
 	// By default we do not record videos and you can turn it on in CI
-	// Make sure to add it to true and change mw:useBrowserHeadless to true
+	// Make sure to add it to true and change useBrowserHeadless to false
 	recordVideo: false,
 	// If you do not want to use browser headless, you need to export DISPLAY
 	// and have a display for the tests to work
