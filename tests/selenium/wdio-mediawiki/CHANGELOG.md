@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.3.2 / 2026-02-20
+
+* Make it possible for users to wait for RunJobs.run() (T415658)
+
 ## 6.3.1 / 2026-02-20
 
 * Await the client for RunJobs (T415658)
