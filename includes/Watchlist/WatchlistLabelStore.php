@@ -5,6 +5,7 @@ namespace MediaWiki\Watchlist;
 use InvalidArgumentException;
 use MediaWiki\Config\Config;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Message\Message;
 use MediaWiki\User\UserIdentity;
 use Psr\Log\LoggerInterface;
 use StatusValue;
@@ -19,7 +20,6 @@ class WatchlistLabelStore {
 
 	public const TABLE_WATCHLIST_LABEL = 'watchlist_label';
 	public const TABLE_WATCHLIST_LABEL_MEMBER = 'watchlist_label_member';
-	private int $userLabelCount = 0;
 
 	public function __construct(
 		private IConnectionProvider $dbProvider,
@@ -53,14 +53,14 @@ class WatchlistLabelStore {
 			if ( !$userId ) {
 				throw new InvalidArgumentException( 'user ID must not be zero' );
 			}
-			$this->userLabelCount = $this->countAllForUser( $label->getUser() );
+			$userLabelCount = $this->countAllForUser( $label->getUser() );
 			// Check the user has not exceeded their label limit.
 			if (
-				$this->config->get( MainConfigNames::WatchlistLabelsMaxPerUser ) <= $this->userLabelCount
+				$this->config->get( MainConfigNames::WatchlistLabelsMaxPerUser ) <= $userLabelCount
 			) {
 				return StatusValue::newFatal(
 					'watchlistlabels-limit-reached',
-					$this->config->get( MainConfigNames::WatchlistLabelsMaxPerUser )
+					Message::numParam( $this->config->get( MainConfigNames::WatchlistLabelsMaxPerUser ) )
 				);
 			}
 			$dbw->newInsertQueryBuilder()
